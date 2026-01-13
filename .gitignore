@@ -1,0 +1,8 @@
+.DS_Store
+.vscode/settings.json
+bin/ActorSystemApplication.class
+bin/com/actor/config/ActorConfig.class
+bin/com/actor/controller/IActorSystem.class
+bin/com/actor/controller/impl/ActorSystem.class
+bin/com/actor/domain/Actor.class
+bin/com/actor/domain/Work.class
