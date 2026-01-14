@@ -1,10 +1,10 @@
-# ActorModel
+# Actor Framework
 
-A lightweight Java implementation of the **Actor Model** for concurrent and distributed computing.
+A simple lightweight Java implementation of the **Actor Framework** for concurrent and distributed computing.
 
 ## Overview
 
-This project implements the Actor Model, a concurrency paradigm that uses actors as the fundamental unit of computation. Each actor encapsulates state and behavior, communicating with other actors asynchronously through message passing. This model simplifies concurrent programming by eliminating shared state and locks.
+This project implements the Actor Framework, a concurrency paradigm that uses actors as the fundamental unit of computation. Each actor encapsulates state and behavior, communicating with other actors asynchronously through message passing. This model simplifies concurrent programming by eliminating shared state and locks.
 
 ## Components
 
@@ -39,7 +39,7 @@ The fundamental unit of the system:
 - Thread-safe message handling with no shared mutable state
 
 ### 5. **Work**
-A functional interface for defining actor behavior:
+A functional interface for defining actor behavior (any work):
 ```java
 public interface Work {
     void execute(Object data);
