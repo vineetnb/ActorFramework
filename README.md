@@ -6,26 +6,6 @@ A lightweight Java implementation of the **Actor Model** for concurrent and dist
 
 This project implements the Actor Model, a concurrency paradigm that uses actors as the fundamental unit of computation. Each actor encapsulates state and behavior, communicating with other actors asynchronously through message passing. This model simplifies concurrent programming by eliminating shared state and locks.
 
-## Architecture
-
-The project follows a well-organized structure with clear separation of concerns:
-
-```
-ActorModel/
-├── src/
-│   ├── ActorSystemApplication.java    # Entry point and usage example
-│   └── com/actor/
-│       ├── config/
-│       │   └── ActorConfig.java       # Configuration for the actor system
-│       ├── controller/
-│       │   ├── IActorSystem.java      # Actor system interface
-│       │   └── impl/
-│       │       └── ActorSystem.java   # Actor system implementation
-│       └── domain/
-│           ├── Actor.java             # Actor implementation
-│           └── Work.java              # Functional interface for actor behavior
-```
-
 ## Components
 
 ### 1. **ActorConfig**
@@ -68,11 +48,11 @@ public interface Work {
 
 ## Features
 
-✅ **Non-blocking Message Passing** - Actors communicate asynchronously without blocking  
-✅ **Thread-safe Operations** - Uses concurrent data structures and thread-safe collections  
-✅ **Efficient Task Scheduling** - Actors are scheduled only when they have work to do  
-✅ **Graceful Shutdown** - Proper cleanup and resource management  
-✅ **Scalable** - Uses a fixed thread pool for optimal resource utilization  
+**Non-blocking Message Passing** - Actors communicate asynchronously without blocking  
+**Thread-safe Operations** - Uses concurrent data structures and thread-safe collections  
+**Efficient Task Scheduling** - Actors are scheduled only when they have work to do  
+**Graceful Shutdown** - Proper cleanup and resource management  
+**Scalable** - Uses a fixed thread pool for optimal resource utilization  
 
 ## Usage Example
 
@@ -129,33 +109,6 @@ Message -> 2 is sent
 - Java 8 or higher
 - No external dependencies (uses only Java standard library)
 
-## Limitations & Future Improvements
-
-- ⚠️ Actors are single-threaded (process messages sequentially)
-- ⚠️ No remote actor support (local JVM only)
-- ⚠️ No supervision/fault tolerance mechanism
-- ⚠️ No backpressure handling for full inboxes
-
-### Potential Enhancements
-
-- Actor supervision and fault recovery
-- Remote actor support for distributed systems
-- Priority-based message queues
-- Actor pooling and dynamic scaling
-- Integration with reactive frameworks
-
-## Best Practices
-
-1. Keep actor behavior lightweight and avoid long-running operations
-2. Use immutable objects for messages
-3. Avoid blocking operations inside actor behavior
-4. Monitor inbox sizes to prevent unbounded queue growth
-5. Properly shutdown the actor system to prevent resource leaks
-
 ## License
 
 This project is provided as-is for educational and development purposes.
-
-## Author
-
-Vineet
